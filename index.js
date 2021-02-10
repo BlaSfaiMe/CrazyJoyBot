@@ -7,9 +7,12 @@ client.on("ready", () => {
 
 client.on("message", msg => {
 
-    if(msg.content === "night"){
+    if(msg.content == "night"){
         msg.react(client.emojis.cache.get("808744062039359568"))
-    } else {
+    } else if(msg.content === "/joy"){
+        msg.delete()
+        msg.channel.send("<:crazy_joy:808652740472471572>")
+    }else {
         msg.react(client.emojis.cache.get("808652740472471572"))
     }
 })
@@ -24,7 +27,7 @@ setTimeout(() => {
         } else {
             client.channels.cache.get("748822324471660607").send("<:crazy_joy:808652740472471572>")
         }
-    }, 60*15*1000)
+    }, 3600*1000)
 }, 10)
 
 
