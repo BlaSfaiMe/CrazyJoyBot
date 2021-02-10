@@ -6,7 +6,12 @@ client.on("ready", () => {
 })
 
 client.on("message", msg => {
-    msg.react(client.emojis.cache.get("808652740472471572"))
+
+    if(msg.content === "night"){
+        msg.react(client.emojis.cache.get("808744062039359568"))
+    } else {
+        msg.react(client.emojis.cache.get("808652740472471572"))
+    }
 })
 
 setTimeout(() => {
