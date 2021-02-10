@@ -24,4 +24,4 @@ setTimeout(() => {
 
 
 
-client.login("ODA4NzI4ODcxNTkwOTUzMDAy.YCKxdA.xgFlRgmCm1yCC3mBeJxxqO-h3H8")
+client.login(process.env.TOKEN)
